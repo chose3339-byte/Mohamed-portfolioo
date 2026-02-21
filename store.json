@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Alien Figurine",
+        "image": "https://i.imgur.com/alien1.png",
+        "description": "3D alien figure for decoration",
+        "price": "$25"
+    },
+    {
+        "name": "Space Poster",
+        "image": "https://i.imgur.com/spaceposter.png",
+        "description": "High-quality poster of galaxy",
+        "price": "$15"
+    }
+]
