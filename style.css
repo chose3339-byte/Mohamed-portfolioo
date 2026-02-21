@@ -1,0 +1,97 @@
+/* ===== خلفية فضائية ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: black;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+    animation: moveStars 120s linear infinite;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(0,255,255,0.2), transparent 40%),
+        radial-gradient(circle at 70% 60%, rgba(255,0,255,0.2), transparent 40%);
+    animation: glowMove 25s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-1000px, -1000px); }
+}
+
+@keyframes glowMove {
+    from { transform: rotate(0deg) scale(1); }
+    to { transform: rotate(360deg) scale(1.2); }
+}
+
+/* ===== تصميم الأقسام ===== */
+header {
+    background-color: rgba(30,144,255,0.8);
+    padding: 20px 0;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+h2 {
+    color: #4fc3ff;
+    text-shadow: 0 0 8px #4fc3ff;
+}
+
+a {
+    color: #4fc3ff;
+    text-decoration: none;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 12px;
+    flex: 1 1 200px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #4fc3ff;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
